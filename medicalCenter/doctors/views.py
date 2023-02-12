@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 
 
 def index(request):     #HttpRequest на запрос ответ
-    return HttpResponse("Страница приложения ginecologist")
+    return HttpResponse("Страница приложения doctors")
 
 def categories(request, catid):  # add param catid
     if(request.POST):

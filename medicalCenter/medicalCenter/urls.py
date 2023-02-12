@@ -1,4 +1,4 @@
-"""yourginecologist URL Configuration
+"""medicalCenter URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -17,17 +17,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from ginecologist.views import *
+from doctors.views import *
 from django.urls import path, include  #упрошает работы сайта при возможно передачи в другуой прилож
 
-from yourginecologist import settings
+from medicalCenter import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 #     path('', index),     #http://127.0.0.1:8000/ginecologist/
 #     path('cats/', categories),        #http://127.0.0.1:8000/cats/
-    path('', include('ginecologist.urls')), #eto marshrut vseh prilojenyi, teper nado sozdatb urls v
-                                                            # app ginecologist
+    path('', include('doctors.urls')), #eto marshrut vseh prilojenyi, teper nado sozdatb urls v
+                                                            # app doctors
 ]
 
 if settings.DEBUG:
